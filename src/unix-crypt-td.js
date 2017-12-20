@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Unix crypt(3) Javascript Implementation
  * 
@@ -342,10 +343,10 @@ window['unixCryptTD'] = (function() {
                          (preS[t+4]<<0)+
                          (preS[t+5]<<4)];
                 t = 4*j;
-                f[t+0] = (k>>3)&01;
-                f[t+1] = (k>>2)&01;
-                f[t+2] = (k>>1)&01;
-                f[t+3] = (k>>0)&01;
+                f[t+0] = (k>>3)&1;
+                f[t+1] = (k>>2)&1;
+                f[t+2] = (k>>1)&1;
+                f[t+3] = (k>>0)&1;
             }
             /*
              * The new R is L ^ f(R, K).
@@ -406,7 +407,7 @@ window['unixCryptTD'] = (function() {
             block[i] = 0;
         for(i=0, k=0; (c= pw[k]) && i<64; ++k){
             for(j=0; j<7; j++, i++)
-                block[i] = (c>>(6-j)) & 01;
+                block[i] = (c>>(6-j)) & 1;
             i++;
         }
 
@@ -425,7 +426,7 @@ window['unixCryptTD'] = (function() {
             if(c>'9'.charCodeAt(0)) c -= 7;
             c -= '.'.charCodeAt(0);
             for(j=0;j<6;j++){
-                if((c>>j) & 01){
+                if((c>>j) & 1){
                     temp = E[6*i+j];
                     E[6*i+j] = E[6*i+j+24];
                     E[6*i+j+24] = temp;
