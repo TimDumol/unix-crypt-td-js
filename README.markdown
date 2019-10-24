@@ -23,7 +23,7 @@ Simple examples:
 Testing
 -------
 
-Simply open `test/test.html` in any browser.
+Just run `npm test`
 
 Author
 ------

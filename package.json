@@ -1,13 +1,13 @@
 {
   "name": "unix-crypt-td-js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Javascript implementation of the Unix crypt(3) DES-based hash",
   "main": "unix-crypt-td.min.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/TimDumol/unix-crypt-td-js/issues"
   },
-  "homepage": "https://github.com/TimDumol/unix-crypt-td-js#readme"
+  "homepage": "https://github.com/TimDumol/unix-crypt-td-js#readme",
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
 }

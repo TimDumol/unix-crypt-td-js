@@ -58,7 +58,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  */
  * @param {boolean=} returnBytes (optional) If true, return an array of bytes;
  *                                      otherwise, return a string.
  */
-window['unixCryptTD'] = (function() {
+var unixCryptTD = (function() {
     /*
      * Initial permutation,
      */
@@ -455,3 +455,10 @@ window['unixCryptTD'] = (function() {
         else return bytesToStr(iobuf);
     }
 })();
+
+if (typeof(module) !== "undefined" && module != null) {
+  module.exports = {"unixCryptTD": unixCryptTD};
+}
+if (typeof(window) !== "undefined" && window != null) {
+  window["unixCryptTD"] = unixCryptTD;
+}
