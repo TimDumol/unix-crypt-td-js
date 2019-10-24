@@ -457,7 +457,7 @@ var unixCryptTD = (function() {
 })();
 
 if (typeof(module) !== "undefined" && module != null) {
-  module.exports = {"unixCryptTD": unixCryptTD};
+  module.exports = unixCryptTD;
 }
 if (typeof(window) !== "undefined" && window != null) {
   window["unixCryptTD"] = unixCryptTD;

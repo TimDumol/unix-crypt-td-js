@@ -1,6 +1,6 @@
 {
   "name": "unix-crypt-td-js",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Javascript implementation of the Unix crypt(3) DES-based hash",
   "main": "unix-crypt-td.min.js",
   "directories": {
