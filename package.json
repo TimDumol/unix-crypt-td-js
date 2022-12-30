@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/TimDumol/unix-crypt-td-js#readme",
   "devDependencies": {
-    "mocha": "^6.2.2"
+    "mocha": "^10.2.0"
   }
 }
